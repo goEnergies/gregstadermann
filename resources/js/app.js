@@ -15,7 +15,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('todo-component', require('./components/todo.vue'));
+Vue.component('navbar-component', require('./components/navbar.vue'));
+Vue.component('card-component', require('./components/card.vue'));
+Vue.component('note-component', require('./components/note.vue'));
 
 const app = new Vue({
     el: '#app'

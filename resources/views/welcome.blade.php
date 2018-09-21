@@ -4,64 +4,24 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <title>Bulk Fuel Boss</title>
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <!-- Styles -->
-        <style>
-          
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-       
-           
-			
-		</style>
     </head>
+
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div>
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
 
-            <div class="content">
-                <div class="text-center font-thin text-3xl mb-3 p-3 bg-indigo-darkest text-indigo-lightest">
-                    bulk fuel sales and transport
-                </div>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
-  <a class="no-underline text-indigo-lightest" href="https://laravel.com/docs">Documentation</a>
-</button>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
-  <a class="no-underline text-indigo-lightest" href="https://laracasts.com">Laracasts</a>
-</button>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
-   <a class="no-underline text-indigo-lightest" href="https://laravel-news.com">News</a>
-</button>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
-    <a class="no-underline text-indigo-lightest" href="https://nova.laravel.com">Nova</a>
-</button>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
- <a class="no-underline text-indigo-lightest" href="https://forge.laravel.com">Forge</a>
-</button>
-<button class="bg-indigo-darkest hover:bg-indigo-light text-white font-bold py-2 px-4 rounded">
-   <a class="no-underline text-indigo-lightest" href="https://github.com/laravel/laravel">GitHub</a>
-</button>
+<div id="app" class="h-screen flex-wrap flex items-center justify-center bg-grey-lightest font-sans">
+<navbar-component></navbar-component>
+<note-component title="Quick Note"></note-component>
+<div class="flex bg-grey-lighter">
+<card-component title="Clients">id, name, description, address, created_at, updated_at </card-component>
+<card-component title="Sites">id, name, street, city, state, zip, created_at, updated_at</card-component>
+<card-component title="Tanks"></card-component>
+</div>
+<todo-component></todo-component>
+	</div>
 
-
-            </div>
-        </div>
-    </body>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script> 
+	</body>
 </html>

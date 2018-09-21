@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::apiResource('todos', 'TodoController');
 Route::get('/', function () {
     return view('welcome');
 });
