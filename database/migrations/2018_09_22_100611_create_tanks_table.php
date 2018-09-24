@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSitesTable extends Migration
+class CreateTanksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateSitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sites', function (Blueprint $table) {
+        Schema::create('tanks', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->text('address');
-			$table->integer('client_id')->nullable();
-			$table->integer('tank_id')->nullable();
+			$table->integer('max_volume');
+			$table->integer('current_volume');
+			//$table->integer('client_id');
+			//$table->integer('site_id');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateSitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sites');
+        Schema::dropIfExists('tanks');
     }
 }

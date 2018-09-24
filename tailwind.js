@@ -194,6 +194,8 @@ module.exports = {
 
   fonts: {
     'sans': [
+	'Quicksand',
+	  'Avenir Next',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -880,13 +882,13 @@ module.exports = {
     height: ['responsive'],
     leading: ['responsive'],
     lists: ['responsive'],
-    margin: ['responsive'],
+    margin: ['responsive', 'hover'],
     maxHeight: ['responsive'],
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
-    opacity: ['responsive'],
+    opacity: ['responsive','hover'],
     outline: ['focus'],
     overflow: ['responsive'],
     padding: ['responsive'],

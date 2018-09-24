@@ -10,7 +10,9 @@ $factory->define(App\Client::class, function (Faker $faker) {
         'address'=>$faker->streetAddress,
 		'created_at'=>$faker->dateTime(),
 		'updated_at'=>$faker->dateTime(),
+//		'site_id'=>1,
 		//'deleted_at'=>$faker->dateTime(),
+ 		'site_id' => App\Site::pluck('id')->random(),
 
 
     ];

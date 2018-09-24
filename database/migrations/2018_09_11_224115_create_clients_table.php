@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
 			$table->text('description');
 			$table->string('address');
             $table->timestamps();
+			//$table->integer('site_id')->nullable();
         });
     }
 

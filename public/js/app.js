@@ -14016,6 +14016,8 @@ Vue.component('todo-component', __webpack_require__(40));
 Vue.component('navbar-component', __webpack_require__(43));
 Vue.component('card-component', __webpack_require__(51));
 Vue.component('note-component', __webpack_require__(54));
+Vue.component('form-component', __webpack_require__(61));
+Vue.component('checkbox-component', __webpack_require__(62));
 
 var app = new Vue({
   el: '#app'
@@ -47370,6 +47372,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
@@ -47426,153 +47430,211 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg"
-    },
-    [
-      _c("div", { staticClass: "mb-4" }, [
-        _c("h1", { staticClass: "text-indigo-light mb-3" }, [
-          _vm._v("Todo List")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.newTodo,
-                expression: "newTodo"
-              }
-            ],
-            staticClass:
-              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
-            attrs: { placeholder: "Add Todo" },
-            domProps: { value: _vm.newTodo },
-            on: {
-              keyup: function($event) {
-                if (
-                  !("button" in $event) &&
-                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                ) {
-                  return null
-                }
-                return _vm.add($event)
-              },
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.newTodo = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass:
-                "bg-white border border-indigo hover:text-white hover:font-bold hover:border-indigo-darker hover:bg-indigo-darker text-indigo border-indigo font-bold py-2 px-4 rounded inline-flex items-center",
-              attrs: { disabled: _vm.newTodo.length === 0 },
-              on: { click: _vm.add }
-            },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "fill-current w-4 h-4 mr-2",
-                  attrs: {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 20 20"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c("span", [_vm._v("Add")])
-            ]
-          )
-        ])
+  return _c("div", { staticClass: "bg-white rounded shadow p-6 mb-6 w-full" }, [
+    _c("div", { staticClass: "mb-4" }, [
+      _c("h3", { staticClass: "text-indigo-light mb-3" }, [
+        _vm._v("Add A Fuel Order")
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        [
-          _vm._l(_vm.todos, function(todo, index) {
-            return _c(
-              "div",
-              { key: todo.id, staticClass: "flex mb-4 items-center" },
+      _c("div", { staticClass: "flex" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newTodo,
+              expression: "newTodo"
+            }
+          ],
+          staticClass:
+            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+          attrs: { placeholder: "Client" },
+          domProps: { value: _vm.newTodo },
+          on: {
+            keyup: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.add($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newTodo = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newTodo,
+              expression: "newTodo"
+            }
+          ],
+          staticClass:
+            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+          attrs: { placeholder: "Site" },
+          domProps: { value: _vm.newTodo },
+          on: {
+            keyup: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.add($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newTodo = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newTodo,
+              expression: "newTodo"
+            }
+          ],
+          staticClass:
+            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+          attrs: { placeholder: "Tank" },
+          domProps: { value: _vm.newTodo },
+          on: {
+            keyup: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.add($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newTodo = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "bg-white border border-indigo hover:text-white hover:font-bold hover:border-indigo-darker hover:bg-indigo-darker text-indigo border-indigo font-bold py-2 px-4 rounded inline-flex items-center",
+            attrs: { disabled: _vm.newTodo.length === 0 },
+            on: { click: _vm.add }
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticClass: "fill-current w-4 h-4 mr-2",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 20 20"
+                }
+              },
               [
-                _c("input", {
-                  staticClass: "mr-2 leading-tight",
-                  attrs: { type: "checkbox" },
+                _c("path", {
+                  attrs: {
+                    d:
+                      "M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v("Add")])
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      [
+        _vm._l(_vm.todos, function(todo, index) {
+          return _c(
+            "div",
+            { key: todo.id, staticClass: "flex mb-4 items-center" },
+            [
+              _c("input", {
+                staticClass: "mr-2 leading-tight",
+                attrs: { type: "checkbox" },
+                on: {
+                  click: function($event) {
+                    _vm.updateStatue(todo)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "w-full",
+                  class: todo.finished
+                    ? "line-through text-indigo-darkest"
+                    : "text-grey-darkest"
+                },
+                [_vm._v(_vm._s(todo.text))]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
                   on: {
                     click: function($event) {
-                      _vm.updateStatus(todo)
+                      _vm.remove(index)
                     }
                   }
-                }),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass: "w-full",
-                    class: todo.finished
-                      ? "line-through text-indigo-darkest"
-                      : "text-grey-darkest"
-                  },
-                  [_vm._v(_vm._s(todo.text))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass:
-                      "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
-                    on: {
-                      click: function($event) {
-                        _vm.remove(index)
-                      }
-                    }
-                  },
-                  [_vm._v("Remove")]
-                )
-              ]
-            )
-          }),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.todos.length === 0,
-                  expression: "todos.length === 0"
-                }
-              ]
-            },
-            [
-              _c("p", { staticClass: "w-full text-center text-grey-dark" }, [
-                _vm._v("There are no todos")
-              ])
+                },
+                [_vm._v("Remove")]
+              )
             ]
           )
-        ],
-        2
-      )
-    ]
-  )
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.todos.length === 0,
+                expression: "todos.length === 0"
+              }
+            ]
+          },
+          [
+            _c("p", { staticClass: "w-full text-center text-grey-dark" }, [
+              _vm._v("There are no fuel orders")
+            ])
+          ]
+        )
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -48558,6 +48620,211 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/form.vue"
+
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(65)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(63)
+/* template */
+var __vue_template__ = __webpack_require__(64)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/checkbox.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a44578e4", Component.options)
+  } else {
+    hotAPI.reload("data-v-a44578e4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            red: false
+        };
+    }
+});
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { class: { red: _vm.red } }, [_vm._v("vue bindings example")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        { name: "model", rawName: "v-model", value: _vm.red, expression: "red" }
+      ],
+      attrs: { type: "checkbox" },
+      domProps: {
+        checked: Array.isArray(_vm.red) ? _vm._i(_vm.red, null) > -1 : _vm.red
+      },
+      on: {
+        change: function($event) {
+          var $$a = _vm.red,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v)
+            if ($$el.checked) {
+              $$i < 0 && (_vm.red = $$a.concat([$$v]))
+            } else {
+              $$i > -1 &&
+                (_vm.red = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+            }
+          } else {
+            _vm.red = $$c
+          }
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("span", [_vm._v("Red")])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a44578e4", module.exports)
+  }
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(66);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(47)("092e94a0", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a44578e4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a44578e4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.red {\n  color: red;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

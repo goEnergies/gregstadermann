@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Tank extends Model
 {
-	protected $fillable = [
+protected $fillable = [
 		'name',
-		'description',
-		'address'
+		'max_volume',
+		'current_volume',
 	];
 
 	/**
@@ -19,9 +19,5 @@ class Client extends Model
 	public function site() {
 		return $this->belongsTo('App\Site');
 	}
-	 public function tank()
-    {
-        return $this->hasMany('App\Tank');
-    }
-}
 
+}

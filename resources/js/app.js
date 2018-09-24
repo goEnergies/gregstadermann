@@ -19,6 +19,8 @@ Vue.component('todo-component', require('./components/todo.vue'));
 Vue.component('navbar-component', require('./components/navbar.vue'));
 Vue.component('card-component', require('./components/card.vue'));
 Vue.component('note-component', require('./components/note.vue'));
+Vue.component('form-component', require('./components/form.vue'));
+Vue.component('checkbox-component', require('./components/checkbox.vue'));
 
 const app = new Vue({
     el: '#app'
