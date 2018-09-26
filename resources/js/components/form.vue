@@ -1,3 +1,4 @@
+<template>
 <div class="form-group row">
     <div class="col-md-8">
         <input type="text" class="form-control" id="name" name="name"
@@ -11,3 +12,4 @@
         </button>
     </div>
 </div>
+</template>

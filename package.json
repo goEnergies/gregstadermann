@@ -21,6 +21,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "imagemin": "^6.0.0"
+        "imagemin": "^6.0.0",
+        "vue-table-component": "^1.9.2"
     }
 }
