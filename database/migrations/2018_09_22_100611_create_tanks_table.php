@@ -1,3 +1,22 @@
+  'id',                                                                                                                                                                                                                                                   |<
+  'site_id',                                                                                                                                                                                                                                             |
+  'name',                                                                                                                                                                                                                                               |
+  'description',                                                                                                                                                                                                                                        |
+  'active',                                                                                                                                                                                                                                             |
+  'capacity',                                                                                                                                                                                                                                           |
+  'capacityLimit',                                                                                                                                                                                                                                      |
+  'productID',                                                                                                                                                                                                                                          |
+  'defaultProduct.ProductName',                                                                                                                                                                                                                         |
+  'alternativeProductList',                                                                                                                                                                                                                             |
+  'permissibleProductList',                                                                                                                                                                                                                             |
+  'orientationID',                                                                                                                                                                                                                                      |
+  'orientation.description',                                                                                                                                                                                                                            |
+  'installationTypeID',                                                                                                                                                                                                                                 |
+  'installationType.description',                                                                                                                                                                                                                       |
+  'manifold',                                                                                                                                                                                                                                           |
+  'pump',                                                                                                                                                                                                                                               |
+  'client_search',                                                                                                                                                                                                                                      |
+  'site_search',
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -14,10 +33,10 @@ class CreateTanksTable extends Migration
     public function up()
     {
         Schema::create('tanks', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('name');
-			$table->integer('max_volume');
-			$table->integer('current_volume');
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('max_volume');
+            $table->integer('current_volume');
 			//$table->integer('client_id');
 			//$table->integer('site_id');
             $table->timestamps();
