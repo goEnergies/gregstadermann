@@ -20,4 +20,14 @@ class Client extends Model
         'tax_exempt_state',
         'tax_exempt_county',
     ];
+
+    /**
+     * A client HasMany sites.  Relationship below.
+     * @return sites
+     */
+
+     public function site()
+     {
+        return $this->hasOne('App\Site');
+     }
 }

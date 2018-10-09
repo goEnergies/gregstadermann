@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "D:\\bulkfuelboss"
+		}
+	],
+	"settings": {
+		"terminal.integrated.fontSize": 12,
+		"editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace",
+		"editor.fontLigatures": true
+	}
+}

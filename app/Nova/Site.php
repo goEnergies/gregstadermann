@@ -9,12 +9,10 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\HasOne;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\BelongsTo;
 
-
-
-
-class Client extends Resource
+class Site extends Resource
 {
 
 
@@ -23,7 +21,7 @@ class Client extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Client';
+    public static $model = 'App\Site';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -52,17 +50,19 @@ class Client extends Resource
         return [
             ID::make()->sortable(),
             Text::make('name')->rules('required')->sortable(),
-            Text::make('legal_name')->rules('required'),
-            Number::make('tax_payer_id')->sortable(),
-            TextArea::make('description'),
+            Number::make('client_id')->sortable(),
+            Number::make('contact_id')->sortable(),
+            Text::make('phone_number')->rules('required'),
             Text::make('street_address')->rules('required')->sortable(),
             Text::make('city')->rules('required')->sortable(),
             Text::make('state')->rules('required')->sortable(),
             Text::make('zip')->rules('required')->sortable(),
-            Boolean::make('tax_exempt_federal')->rules('required')->sortable(),
-            Boolean::make('tax_exempt_state')->rules('required')->sortable(),
-            Boolean::make('tax_exempt_county')->rules('required')->sortable(),
-            HasOne::make('Site')->sortable(),
+            Text::make('time_opens_at')->sortable(),
+            Text::make('time_closes_at')->sortable(),
+            DateTime::make('Updated At')->sortable(),
+            DateTime::make('Created At')->sortable(),
+            BelongsTo::make('Client')->sortable(),
+
         ];
     }
 
@@ -74,10 +74,7 @@ class Client extends Resource
      */
     public function cards(Request $request)
     {
-        return [
-            (new Metrics\NewClients)->width('1/3'),
-            (new Metrics\ClientsPerDay)->width('1/3'),
-        ];
+        return [];
     }
 
     /**

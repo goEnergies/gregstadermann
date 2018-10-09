@@ -1,17 +1,3 @@
-Client
-SiteName
-Address
-addressTwo
-City
-State
-Zip
-County
-TimeZone
-Site_Contact
-Site_Phone
-lat
-lng
-
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -29,10 +15,16 @@ class CreateSitesTable extends Migration
     {
         Schema::create('sites', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('client_id');
+            $table->unsignedInteger('contact_id');
             $table->string('name');
-            $table->text('address');
-			//$table->integer('client_id')->nullable();
-			//$table->integer('tank_id')->nullable();
+            $table->string('street_address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip');
+            $table->string('phone_number');
+            $table->integer('time_opens_at');
+            $table->integer('time_closes_at');
             $table->timestamps();
         });
     }

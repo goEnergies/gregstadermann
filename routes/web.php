@@ -13,14 +13,14 @@
 Route::resource('clients', 'ClientController');
 
 Route::apiResource('todos', 'TodoController');
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('home');
 });
 Route::get('/main', function () {
     return view('main');
 });
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
