@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/client', 'ClientController@index');
+Route::resource('clients', 'ClientController');
+
 Route::apiResource('todos', 'TodoController');
 Route::get('/welcome', function () {
     return view('welcome');
