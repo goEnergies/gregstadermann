@@ -12,8 +12,14 @@
  */
 Route::get('/client', 'ClientController@index');
 Route::apiResource('todos', 'TodoController');
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
+});
+Route::get('/main', function () {
+    return view('main');
+});
+Route::get('/', function () {
+    return view('home');
 });
 
 Auth::routes();

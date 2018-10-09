@@ -67,7 +67,10 @@ class Client extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            (new Metrics\NewClients)->width('1/3'),
+            (new Metrics\ClientsPerDay)->width('1/3'),
+        ];
     }
 
     /**

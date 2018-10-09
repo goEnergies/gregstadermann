@@ -21,6 +21,8 @@
       <a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-indigo-dark">Clients</a>
       <a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-indigo-dark">Sites</a>
       <a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-indigo-dark">Tanks</a>
+      <a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-indigo-dark">Suppliers</a>
+      <a href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-indigo-dark">Carriers</a>
     </div>
   </div>
 </nav>
@@ -31,5 +33,12 @@
 <script>
 </script>
 <style>
-.dropdown-content { display: none; position: absolute; z-index: 1; } .dropdown:hover .dropdown-content { display: block; } 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
