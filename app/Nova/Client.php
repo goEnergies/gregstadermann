@@ -10,7 +10,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasOne;
-
+use Clients\Analytics\Analytics;
 
 
 
@@ -77,6 +77,7 @@ class Client extends Resource
         return [
             (new Metrics\NewClients)->width('1/3'),
             (new Metrics\ClientsPerDay)->width('1/3'),
+            (new Analytics),
         ];
     }
 

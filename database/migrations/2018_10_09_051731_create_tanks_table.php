@@ -20,7 +20,7 @@ class CreateTanksTable extends Migration
             $table->unsignedInteger('product_id');
             $table->integer('volume_max');
             $table->integer('volume_current');
-            $table->float('volume_capacity_limit');
+            $table->integer('volume_capacity_limit');
             $table->boolean('pump');
             $table->timestamps();
         });

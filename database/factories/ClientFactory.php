@@ -18,8 +18,8 @@ $factory->define(App\Client::class, function (Faker $faker) {
         'tax_exempt_federal'=> $faker->boolean(20),
         'tax_exempt_state'=> $faker->boolean(20),
         'tax_exempt_county'=> $faker->boolean(20),
-		'created_at'=>$faker->dateTime(),
-		'updated_at'=>$faker->dateTime(),
+		'created_at'=>$faker->dateTimeThisMonth(),
+		'updated_at'=>$faker->dateTimeThisMonth(),
         //'site_id' => App\Site::pluck('id')->random(),
 
 

@@ -3,12 +3,10 @@
 namespace App\Nova\Metrics;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Metrics\Value;
-//use App\Nova\Client;
-use App\Client;
+use App\Site;
 
-class ClientsPerDay extends Trend
+class NumberOfSites extends Value
 {
     /**
      * Calculate the value of the metric.
@@ -18,8 +16,9 @@ class ClientsPerDay extends Trend
      */
     public function calculate(Request $request)
     {
-        return $this->countByDays($request, Client::class)
-        ->showLatestValue();
+        return $this->count($request, Site::class);
+
+        //return $this->sum($request, Site::class, '');
     }
 
     /**
@@ -33,6 +32,10 @@ class ClientsPerDay extends Trend
             30 => '30 Days',
             60 => '60 Days',
             90 => '90 Days',
+            365 => '365 Days',
+            'MTD' => 'Month To Date',
+            'QTD' => 'Quarter To Date',
+            'YTD' => 'Year To Date',
         ];
     }
 
@@ -53,6 +56,6 @@ class ClientsPerDay extends Trend
      */
     public function uriKey()
     {
-        return 'clients-per-day';
+        return 'number-of-sites';
     }
 }

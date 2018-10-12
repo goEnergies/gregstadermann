@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -12,7 +15,8 @@
         "laravel/nova": "*",
         "laravel/tinker": "^1.0",
         "nesbot/carbon": "*",
-        "tymon/jwt-auth": "*"
+        "tymon/jwt-auth": "*",
+        "clients/analytics": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -39,8 +43,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
@@ -64,8 +67,12 @@
         {
             "type": "path",
             "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Analytics"
         }
-    ],  
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

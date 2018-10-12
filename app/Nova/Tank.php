@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Boolean;
 
+
 class Tank extends Resource
 {
 
@@ -49,10 +50,14 @@ class Tank extends Resource
             Text::make('name')->rules('required')->sortable(),
             Number::make('site_id')->sortable(),
             Number::make('product_id')->sortable(),
+            Number::make('Volume', function () {
+                return '('.$this->volume_current.' / '.$this->volume_max.')';
+            }),
             Number::make('volume_max')->sortable(),
             Number::make('volume_current')->sortable(),
-            Number::make('volume_capacity')->sortable(),
+            Number::make('volume_capacity_limit')->min(1)->max(100)->step(10.0)->sortable(),
             Boolean::make('pump')->sortable(),
+
 
         ];
     }

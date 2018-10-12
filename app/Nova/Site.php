@@ -3,7 +3,6 @@
 namespace App\Nova;
 
 use Carbon\Carbon;
-
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -13,6 +12,8 @@ use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Place;
+use Laravel\Nova\Fields\Country;
 
 class Site extends Resource
 {
@@ -58,10 +59,13 @@ class Site extends Resource
             Number::make('client_id')->hideFromIndex(),
             Number::make('contact_id')->sortable(),
             Text::make('phone_number')->rules('required'),
-            Text::make('street_address')->rules('required')->sortable(),
-            Text::make('city')->rules('required')->sortable(),
-            Text::make('state')->rules('required')->sortable(),
-            Text::make('zip')->rules('required')->sortable(),
+            $this->addressFields(),
+            //Text::make('street_address')->rules('required')->sortable(),
+            //Text::make('city')->rules('required')->sortable(),
+            //Text::make('state')->rules('required')->sortable(),
+            //Text::make('zip')->rules('required')->sortable(),
+            //DateTime::make('time_opens_at')->format('H:i:s')->sortable(),
+            //DateTime::make('time_closes_at')->sortable(),
             DateTime::make('time_opens_at')->format('hA')->sortable(),
             DateTime::make('time_closes_at')->format('hA')->sortable(),
             DateTime::make('Updated At')->hideFromIndex(),
@@ -70,7 +74,22 @@ class Site extends Resource
 
         ];
     }
-
+/**
+ * Get the address fields for the resource.
+ *
+ * @return \Illuminate\Http\Resources\MergeValue
+ */
+protected function addressFields()
+{
+    return $this->merge([
+        Place::make('Address', 'street_address')->postalCode('zip')->hideFromIndex(),
+        //Text::make('Address Line 2')->hideFromIndex(),
+        Text::make('city')->hideFromIndex(),
+        Text::make('state')->hideFromIndex(),
+        Text::make('zip')->hideFromIndex(),
+        Country::make('Country')->hideFromIndex(),
+    ]);
+}
     /**
      * Get the cards available for the request.
      *
@@ -79,7 +98,14 @@ class Site extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            (new Metrics\NumberOfSites)->width('1/4'),
+            //(new Metrics\TimeOpensAtPerSite)->width('1/2'),
+
+            ]
+
+        ;
+        //return [];
     }
 
     /**

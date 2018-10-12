@@ -12,8 +12,8 @@ $factory->define(App\Tank::class, function (Faker $faker) {
         'volume_current' => $faker->numberBetween(1, 10000),
         'volume_capacity_limit' => $faker->numberBetween(80, 95),
         'pump'=> $faker->boolean,
-		'created_at'=>$faker->dateTime(),
-		'updated_at'=>$faker->dateTime(),
+		'created_at'=>$faker->dateTimeThisMonth(),
+		'updated_at'=>$faker->dateTimeThisMonth(),
 
 
     ];

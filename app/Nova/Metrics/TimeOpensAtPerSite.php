@@ -2,13 +2,11 @@
 
 namespace App\Nova\Metrics;
 
+use App\Site;
 use Illuminate\Http\Request;
-use Laravel\Nova\Metrics\Trend;
-use Laravel\Nova\Metrics\Value;
-//use App\Nova\Client;
-use App\Client;
+use Laravel\Nova\Metrics\Partition;
 
-class ClientsPerDay extends Trend
+class TimeOpensAtPerSite extends Partition
 {
     /**
      * Calculate the value of the metric.
@@ -18,22 +16,7 @@ class ClientsPerDay extends Trend
      */
     public function calculate(Request $request)
     {
-        return $this->countByDays($request, Client::class)
-        ->showLatestValue();
-    }
-
-    /**
-     * Get the ranges available for the metric.
-     *
-     * @return array
-     */
-    public function ranges()
-    {
-        return [
-            30 => '30 Days',
-            60 => '60 Days',
-            90 => '90 Days',
-        ];
+        return $this->count($request, Site::class, 'time_opens_at');
     }
 
     /**
@@ -53,6 +36,6 @@ class ClientsPerDay extends Trend
      */
     public function uriKey()
     {
-        return 'clients-per-day';
+        return 'time-opens-at-per-site';
     }
 }
