@@ -23,8 +23,8 @@ class CreateSitesTable extends Migration
             $table->string('state');
             $table->string('zip');
             $table->string('phone_number');
-            $table->integer('time_opens_at');
-            $table->integer('time_closes_at');
+            $table->dateTime('time_opens_at');
+            $table->dateTime('time_closes_at');
             $table->timestamps();
         });
     }

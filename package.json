@@ -18,7 +18,8 @@
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
         "tailwindcss": "^0.6.5",
-        "vue": "^2.5.7"
+        "vue": "^2.5.7",
+        "vue-router": "^3.0.1"
     },
     "dependencies": {
         "imagemin": "^6.0.0",

@@ -14303,8 +14303,9 @@ module.exports = __webpack_require__(69);
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -14329,6 +14330,8 @@ Vue.component('note-component', __webpack_require__(54));
 Vue.component('form-component', __webpack_require__(57));
 Vue.component('checkbox-component', __webpack_require__(59));
 Vue.component('sidebar-card-component', __webpack_require__(64));
+Vue.component('header-component', __webpack_require__(73));
+Vue.component('price-block-component', __webpack_require__(78));
 //Vue.component('skeleton-component', require('./components/skeleton.vue'));
 var app = new Vue({
   el: '#app'
@@ -49280,6 +49283,926 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(74)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(76)
+/* template */
+var __vue_template__ = __webpack_require__(77)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/header.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-798ca618", Component.options)
+  } else {
+    hotAPI.reload("data-v-798ca618", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(75);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(5)("9e5a3d1c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-798ca618\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-798ca618\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("header", [
+    _c("div", { staticClass: "bg-indigo-darkest" }, [
+      _c("div", { staticClass: "container sm:mx-20 px-4" }, [
+        _c(
+          "div",
+          { staticClass: "flex items-center sm:justify-between py-4" },
+          [
+            _c("div", { staticClass: "w-1/4 sm:hidden" }, [
+              _c(
+                "svg",
+                {
+                  staticClass: "fill-current text-indigo-lightest h-6 w-6",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 20 20"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-1/2 sm:w-auto text-center text-indigo-lightest text-2xl"
+              },
+              [_vm._v("bulk-fuel-boss")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "w-1/4 sm:w-auto sm:flex text-right" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "hidden sm:block sm:flex sm:items-center text-indigo-lightest ml-2"
+                },
+                [
+                  _c(
+                    "span",
+                    { staticClass: "text-indigo-lightest text-sm mr-1" },
+                    [_vm._v("Greg Stadermann")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "svg",
+                      {
+                        staticClass:
+                          "fill-current text-indigo-lightest h-4 w-4 block opacity-50",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                          }
+                        })
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "bg-indigo-darkest sm:block sm:bg-white sm:border-b" },
+      [
+        _c("div", { staticClass: "container px-4" }, [
+          _c(
+            "div",
+            { staticClass: "sm:mx-20 md:mx-20 lg:mx-20 xl:mx-20 sm:flex" },
+            [
+              _c("div", { staticClass: "flex -mb-px mr-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "border-indigo-dark no-underline text-indigo-lightest sm:opacity-100 opacity-75 sm:text-indigo-dark text-sm flex items-center py-3 border-b border-transparent hover:opacity-100 sm:hover:border-indigo-darkest",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current w-4 h-4 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zM7 6v2a3 3 0 1 0 6 0V6a3 3 0 1 0-6 0zm-3.65 8.44a8 8 0 0 0 13.3 0 15.94 15.94 0 0 0-13.3 0z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v("\n\t\t\t\t\t\t\t\tClients\n\t\t\t\t\t\t\t")
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex -mb-px mr-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "no-underline text-indigo-lightest sm:opacity-100 opacity-75 sm:text-grey text-sm flex items-center py-3 border-b border-transparent hover:opacity-100 sm:hover:border-grey-dark",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current w-4 h-4 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M9 11.73a2 2 0 1 1 2 0V20H9v-8.27zm5.24 2.51l-1.41-1.41A3.99 3.99 0 0 0 10 6a4 4 0 0 0-2.83 6.83l-1.41 1.41a6 6 0 1 1 8.49 0zm2.83 2.83l-1.41-1.41a8 8 0 1 0-11.31 0l-1.42 1.41a10 10 0 1 1 14.14 0z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v("\n\t\t\t\t\t\t\t\tSites\n\t\t\t\t\t\t\t")
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex -mb-px mr-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "no-underline text-indigo-lightest sm:opacity-100 opacity-75 sm:text-grey text-sm flex items-center py-3 border-b border-transparent hover:opacity-100 sm:hover:border-grey-dark",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current w-4 h-4 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v("\n\t\t\t\t\t\t\t\tTanks\n\t\t\t\t\t\t\t")
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex -mb-px mr-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "no-underline text-indigo-lightest sm:opacity-100 opacity-75 sm:text-grey text-sm flex items-center py-3 border-b border-transparent hover:opacity-100 sm:hover:border-grey-dark",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current w-4 h-4 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M9 11.73a2 2 0 1 1 2 0V20H9v-8.27zm5.24 2.51l-1.41-1.41A3.99 3.99 0 0 0 10 6a4 4 0 0 0-2.83 6.83l-1.41 1.41a6 6 0 1 1 8.49 0zm2.83 2.83l-1.41-1.41a8 8 0 1 0-11.31 0l-1.42 1.41a10 10 0 1 1 14.14 0z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v("\n\t\t\t\t\t\t\t\tOrders\n\t\t\t\t\t\t\t")
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex -mb-px mr-4" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "no-underline text-indigo-lightest sm:opacity-100 opacity-75 sm:text-grey text-sm flex items-center py-3 border-b border-transparent hover:opacity-100 sm:hover:border-grey-dark",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current w-4 h-4 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M3.94 6.5L2.22 3.64l1.42-1.42L6.5 3.94c.52-.3 1.1-.54 1.7-.7L9 0h2l.8 3.24c.6.16 1.18.4 1.7.7l2.86-1.72 1.42 1.42-1.72 2.86c.3.52.54 1.1.7 1.7L20 9v2l-3.24.8c-.16.6-.4 1.18-.7 1.7l1.72 2.86-1.42 1.42-2.86-1.72c-.52.3-1.1.54-1.7.7L11 20H9l-.8-3.24c-.6-.16-1.18-.4-1.7-.7l-2.86 1.72-1.42-1.42 1.72-2.86c-.3-.52-.54-1.1-.7-1.7L0 11V9l3.24-.8c.16-.6.4-1.18.7-1.7zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v("\n\t\t\t\t\t\t\t\tSettings\n\t\t\t\t\t\t\t")
+                  ]
+                )
+              ])
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("img", {
+        staticClass: "inline-block h-10 w-10 rounded-full",
+        attrs: { src: "https://randomuser.me/api/portraits/men/89.jpg" }
+      })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-798ca618", module.exports)
+  }
+}
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(79)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(81)
+/* template */
+var __vue_template__ = __webpack_require__(82)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/price-block.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-894174e4", Component.options)
+  } else {
+    hotAPI.reload("data-v-894174e4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(80);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(5)("9a7411c6", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-894174e4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./price-block.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-894174e4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./price-block.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass:
+        "bg-white border-t border-b sm:border-l sm:border-r sm:rounded shadow mb-6"
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex items-center px-6 sm:hidden" }, [
+        _c("div", { staticClass: "flex-1 py-6" }, [
+          _c("div", { staticClass: "text-indigo-darkest mb-2" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", [
+              _c("div", { staticClass: "inline-block relative w-48" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker"
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "fill-current h-4 w-4",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(3)
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "border-b px-6" }, [
+      _c("div", { staticClass: "flex justify-between -mb-px" }, [
+        _c("div", { staticClass: "sm:hidden text-indigo-dark py-4 text-lg" }, [
+          _vm._v("\n\t\t\t\t\t\t\tPricing\n\t\t\t\t\t\t")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "hidden sm:flex" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "appearance-none py-4 text-indigo-dark border-b border-indigo-dark mr-4",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t\tDistillate\n\t\t\t\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "py-4 text-grey-dark border-b border-transparent hover:border-grey-dark mr-4",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t\tRefined\n\t\t\t\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "py-4 text-grey-dark border-b border-transparent hover:border-grey-dark",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t\tBiodiesel\n\t\t\t\t\t\t\t")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "appearance-none py-4 text-indigo-dark border-b border-indigo-dark mr-4",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t1D\n\t\t\t\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "py-4 text-grey-dark border-b border-transparent hover:border-grey-dark mr-4",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t1M\n\t\t\t\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "py-4 text-grey-dark border-b border-transparent hover:border-grey-dark mr-4",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\t1YR\n\t\t\t\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "py-4 text-grey-dark border-b border-transparent hover:border-grey-dark",
+              attrs: { type: "button" }
+            },
+            [_vm._v("\n\t\t\t\t\t\t\tALL\n\t\t\t\t\t\t\t")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-indigo-darker" }, [
+      _c("span", { staticClass: "text-3xl align-top" }, [_vm._v("Diesel $")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "text-4xl" }, [_vm._v("4")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "text-3xl align-top" }, [_vm._v(".50")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "select",
+      {
+        staticClass:
+          "block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+      },
+      [
+        _c("option", [_vm._v("Client 1")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Client 2")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Client 3")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hidden sm:flex" }, [
+      _c("div", { staticClass: "w-1/3 text-center py-6" }, [
+        _c("div", { staticClass: "border-r mb-2 p-2" }, [
+          _c("div", { staticClass: "text-indigo-darker" }, [
+            _c("span", { staticClass: "text-3xl align-top" }, [
+              _vm._v("Reg $")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-4xl" }, [_vm._v("3")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-3xl align-top" }, [_vm._v(".33")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "uppercase text-indigo tracking-wide" }, [
+            _vm._v("\n\t\t\t\t\t\t\t\t\t\tE10 87 Price\n\t\t\t\t\t\t\t\t\t")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-1/3 text-center py-6" }, [
+        _c("div", { staticClass: "border-r p-2 mb-2" }, [
+          _c("div", { staticClass: "text-indigo-darker" }, [
+            _c("span", { staticClass: "text-3xl align-top" }, [
+              _vm._v("Prem $")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-4xl" }, [_vm._v("4")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-3xl align-top" }, [_vm._v(".39")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "uppercase text-indigo tracking-wide" }, [
+            _vm._v("\n\t\t\t\t\t\t\t\t\t\tE10 93 Price\n\t\t\t\t\t\t\t\t\t")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-1/3 text-center py-6" }, [
+        _c("div", { staticClass: "mb-2 p-2" }, [
+          _c("div", { staticClass: "text-indigo-darker" }, [
+            _c("span", { staticClass: "text-3xl align-top" }, [
+              _vm._v("ULSD $")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-4xl" }, [_vm._v("5")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-3xl align-top" }, [_vm._v(".77")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "uppercase text-indigo tracking-wide" }, [
+            _vm._v("\n\t\t\t\t\t\t\t\tULSD #2 Price\n\t\t\t\t\t\t\t\t\t")
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-894174e4", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

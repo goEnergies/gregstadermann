@@ -20,6 +20,10 @@ class Site extends Model
         'time_closes_at',
     ];
 
+    protected $dates = [
+        'time_opens_at',
+        'time_closes_at'
+      ];
     /**
      * A site HasOne client.  Relationship below.
      * @return client
@@ -28,6 +32,11 @@ class Site extends Model
     public function client(){
         return $this->belongsTo('App\Client');
     }
+
+        /**
+     * A site HasMany tanks.  Relationship below.
+     * @return tanks
+     */
 
     public function tanks(){
         return $this->hasMany('App\Tank');

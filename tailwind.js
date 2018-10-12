@@ -194,7 +194,15 @@ module.exports = {
 
   fonts: {
     'sans': [
-	'Quicksand',
+      //'Operator Mono',
+        //'Roboto',
+        'Exo',
+        'Exo2',
+        'Nunito',
+        'Raleway',
+        'Poppins',
+         'Lato',
+      'Quicksand',
 	  'Avenir Next',
       'system-ui',
       'BlinkMacSystemFont',

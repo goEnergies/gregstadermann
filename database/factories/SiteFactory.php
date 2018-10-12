@@ -13,8 +13,8 @@ $factory->define(App\Site::class, function (Faker $faker) {
         'state' => $faker->state,
         'zip' => $faker->postcode,
         'phone_number' => $faker->phoneNumber,
-        'time_opens_at' => $faker->numberBetween(1, 12),
-        'time_closes_at' => $faker->numberBetween(1, 12),
+        'time_opens_at' => $faker->dateTime(),
+        'time_closes_at' => $faker->dateTime(),
         'created_at'=>$faker->dateTime(),
         'updated_at'=>$faker->dateTime(),
     ];

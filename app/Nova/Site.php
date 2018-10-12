@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 
+use Carbon\Carbon;
+
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -37,6 +39,8 @@ class Site extends Resource
      */
     public static $search = [
         'id',
+        'name',
+
     ];
 
     /**
@@ -49,19 +53,20 @@ class Site extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('name')->rules('required')->sortable(),
-            Number::make('client_id')->sortable(),
+            Text::make('Site Name', 'name')->rules('required')->sortable(),
+            BelongsTo::make('Client')->sortable(),
+            Number::make('client_id')->hideFromIndex(),
             Number::make('contact_id')->sortable(),
             Text::make('phone_number')->rules('required'),
             Text::make('street_address')->rules('required')->sortable(),
             Text::make('city')->rules('required')->sortable(),
             Text::make('state')->rules('required')->sortable(),
             Text::make('zip')->rules('required')->sortable(),
-            Text::make('time_opens_at')->sortable(),
-            Text::make('time_closes_at')->sortable(),
-            DateTime::make('Updated At')->sortable(),
-            DateTime::make('Created At')->sortable(),
-            BelongsTo::make('Client')->sortable(),
+            DateTime::make('time_opens_at')->format('hA')->sortable(),
+            DateTime::make('time_closes_at')->format('hA')->sortable(),
+            DateTime::make('Updated At')->hideFromIndex(),
+            DateTime::make('Created At')->hideFromIndex(),
+
 
         ];
     }
