@@ -7,6 +7,7 @@ use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
 use App\Nova\Metrics\ClientsPerDay;
+use Clients\Analytics\Analytics;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -59,6 +60,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new Help,
             new ClientsPerDay,
+            new Analytics,
         ];
     }
 

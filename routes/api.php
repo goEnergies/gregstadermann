@@ -18,6 +18,8 @@ Route::apiResources([
 'tanks' => 'API\TankController'
 
 ]);
+
+Route::apiResource('todos','TodoController');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

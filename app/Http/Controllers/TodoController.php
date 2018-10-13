@@ -14,7 +14,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-		return response(Todo::latest()->get(), 200);    
+		return response(Todo::latest()->get(), 200);
 	}
 
     /**
@@ -37,12 +37,13 @@ class TodoController extends Controller
     {
     $data = $request->validate([
         'text' => 'required',
+        //'client_name' => 'required',
         'finished' => 'required|boolean',
     ]);
-    $todo = Todo::create($data);
+        $todo = Todo::create($data);
 
-    return response($todo, 200);
-	}
+        return response($todo, 200);
+    }
 
     /**
      * Display the specified resource.

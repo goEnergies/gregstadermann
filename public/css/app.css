@@ -3164,7 +3164,7 @@ a {
 }
 
 .font-sans {
-  font-family: Exo, Exo2, Nunito, Raleway, Poppins, Lato, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Hind, Oxygen, Source Sans Pro, Muli, Nunito, Avenir Next, Poppins, Lato, Roboto, Rubik, Raleway, Poppins, Exo, Exo2, Raleway, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
@@ -3172,7 +3172,7 @@ a {
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Cousine, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .font-hairline {
@@ -4333,6 +4333,14 @@ a {
 
 .max-h-full {
   max-height: 100%;
+}
+
+.max-h-screen-1\/4 {
+  max-height: 25vh;
+}
+
+.max-h-screen-1\/2 {
+  max-height: 50vh;
 }
 
 .max-h-screen {
@@ -9348,7 +9356,7 @@ a {
   }
 
   .sm\:font-sans {
-    font-family: Exo, Exo2, Nunito, Raleway, Poppins, Lato, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Hind, Oxygen, Source Sans Pro, Muli, Nunito, Avenir Next, Poppins, Lato, Roboto, Rubik, Raleway, Poppins, Exo, Exo2, Raleway, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
@@ -9356,7 +9364,7 @@ a {
   }
 
   .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Cousine, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .sm\:font-hairline {
@@ -10517,6 +10525,14 @@ a {
 
   .sm\:max-h-full {
     max-height: 100%;
+  }
+
+  .sm\:max-h-screen-1\/4 {
+    max-height: 25vh;
+  }
+
+  .sm\:max-h-screen-1\/2 {
+    max-height: 50vh;
   }
 
   .sm\:max-h-screen {
@@ -15502,7 +15518,7 @@ a {
   }
 
   .md\:font-sans {
-    font-family: Exo, Exo2, Nunito, Raleway, Poppins, Lato, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Hind, Oxygen, Source Sans Pro, Muli, Nunito, Avenir Next, Poppins, Lato, Roboto, Rubik, Raleway, Poppins, Exo, Exo2, Raleway, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
@@ -15510,7 +15526,7 @@ a {
   }
 
   .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Cousine, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .md\:font-hairline {
@@ -16671,6 +16687,14 @@ a {
 
   .md\:max-h-full {
     max-height: 100%;
+  }
+
+  .md\:max-h-screen-1\/4 {
+    max-height: 25vh;
+  }
+
+  .md\:max-h-screen-1\/2 {
+    max-height: 50vh;
   }
 
   .md\:max-h-screen {
@@ -21656,7 +21680,7 @@ a {
   }
 
   .lg\:font-sans {
-    font-family: Exo, Exo2, Nunito, Raleway, Poppins, Lato, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Hind, Oxygen, Source Sans Pro, Muli, Nunito, Avenir Next, Poppins, Lato, Roboto, Rubik, Raleway, Poppins, Exo, Exo2, Raleway, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
@@ -21664,7 +21688,7 @@ a {
   }
 
   .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Cousine, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .lg\:font-hairline {
@@ -22825,6 +22849,14 @@ a {
 
   .lg\:max-h-full {
     max-height: 100%;
+  }
+
+  .lg\:max-h-screen-1\/4 {
+    max-height: 25vh;
+  }
+
+  .lg\:max-h-screen-1\/2 {
+    max-height: 50vh;
   }
 
   .lg\:max-h-screen {
@@ -27810,7 +27842,7 @@ a {
   }
 
   .xl\:font-sans {
-    font-family: Exo, Exo2, Nunito, Raleway, Poppins, Lato, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Hind, Oxygen, Source Sans Pro, Muli, Nunito, Avenir Next, Poppins, Lato, Roboto, Rubik, Raleway, Poppins, Exo, Exo2, Raleway, Quicksand, Avenir Next, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
@@ -27818,7 +27850,7 @@ a {
   }
 
   .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Cousine, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .xl\:font-hairline {
@@ -28979,6 +29011,14 @@ a {
 
   .xl\:max-h-full {
     max-height: 100%;
+  }
+
+  .xl\:max-h-screen-1\/4 {
+    max-height: 25vh;
+  }
+
+  .xl\:max-h-screen-1\/2 {
+    max-height: 50vh;
   }
 
   .xl\:max-h-screen {

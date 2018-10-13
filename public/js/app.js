@@ -47687,6 +47687,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
@@ -47696,7 +47713,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     return {
       todos: [],
       newTodo: '',
-      baseId: 1
+      baseId: 1,
+      client_name: '',
+      site_name: '',
+      tank_name: ''
     };
   },
 
@@ -47715,12 +47735,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var todo = {
           id: t.baseId,
           text: t.newTodo,
+          client_name: t.client_name,
+          site_name: t.site_name,
+          tank_name: t.tank_name,
           finished: false
         };
 
         t.todos.unshift(todo);
-
-        t.newTodo = '';
+        t.client_name = '', t.site_name = '', t.tank_name = '', t.newTodo = '';
         t.baseId++;
       }
     },
@@ -47743,213 +47765,340 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "bg-white rounded shadow p-6 mb-6 w-full" }, [
-    _c("div", { staticClass: "mb-4" }, [
-      _c("h3", { staticClass: "text-indigo-light mb-3" }, [
-        _vm._v("Add A Fuel Order")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.newTodo,
-              expression: "newTodo"
-            }
-          ],
-          staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
-          attrs: { placeholder: "Client" },
-          domProps: { value: _vm.newTodo },
-          on: {
-            keyup: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.add($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.newTodo = $event.target.value
-            }
-          }
-        }),
+  return _c(
+    "div",
+    {
+      staticClass:
+        "bg-white rounded shadow p-6 mb-6 w-full max-h-screen-1/2 overflow-y-scroll"
+    },
+    [
+      _c("div", { staticClass: "mb-4" }, [
+        _c("h3", { staticClass: "text-indigo-light mb-3" }, [
+          _vm._v("Add A Fuel Order")
+        ]),
         _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.newTodo,
-              expression: "newTodo"
-            }
-          ],
-          staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
-          attrs: { placeholder: "Site" },
-          domProps: { value: _vm.newTodo },
-          on: {
-            keyup: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.add($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.newTodo = $event.target.value
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.newTodo,
-              expression: "newTodo"
-            }
-          ],
-          staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
-          attrs: { placeholder: "Tank" },
-          domProps: { value: _vm.newTodo },
-          on: {
-            keyup: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.add($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.newTodo = $event.target.value
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass:
-              "bg-white border border-indigo hover:text-white hover:font-bold hover:border-indigo-darker hover:bg-indigo-darker text-indigo border-indigo font-bold py-2 px-4 rounded inline-flex items-center",
-            attrs: { disabled: _vm.newTodo.length === 0 },
-            on: { click: _vm.add }
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current w-4 h-4 mr-2",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v("Add")])
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      [
-        _vm._l(_vm.todos, function(todo, index) {
-          return _c(
-            "div",
-            { key: todo.id, staticClass: "flex mb-4 items-center" },
-            [
-              _c("input", {
-                staticClass: "mr-2 leading-tight",
-                attrs: { type: "checkbox" },
-                on: {
-                  click: function($event) {
-                    _vm.updateStatue(todo)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass: "w-full",
-                  class: todo.finished
-                    ? "line-through text-indigo-darkest"
-                    : "text-grey-darkest"
-                },
-                [_vm._v(_vm._s(todo.text))]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
-                  on: {
-                    click: function($event) {
-                      _vm.remove(index)
-                    }
-                  }
-                },
-                [_vm._v("Remove")]
-              )
-            ]
-          )
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
+        _c("div", { staticClass: "flex" }, [
+          _c("input", {
             directives: [
               {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.todos.length === 0,
-                expression: "todos.length === 0"
+                name: "model",
+                rawName: "v-model",
+                value: _vm.newTodo,
+                expression: "newTodo"
               }
-            ]
-          },
-          [
-            _c("p", { staticClass: "w-full text-center text-grey-dark" }, [
-              _vm._v("There are no fuel orders")
+            ],
+            staticClass:
+              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+            attrs: { placeholder: "Text" },
+            domProps: { value: _vm.newTodo },
+            on: {
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.add($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.newTodo = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.client_name,
+                expression: "client_name"
+              }
+            ],
+            staticClass:
+              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+            attrs: { placeholder: "Client" },
+            domProps: { value: _vm.client_name },
+            on: {
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.add($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.client_name = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.site_name,
+                expression: "site_name"
+              }
+            ],
+            staticClass:
+              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+            attrs: { placeholder: "Site" },
+            domProps: { value: _vm.site_name },
+            on: {
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.add($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.site_name = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.tank_name,
+                expression: "tank_name"
+              }
+            ],
+            staticClass:
+              "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+            attrs: { placeholder: "Tank" },
+            domProps: { value: _vm.tank_name },
+            on: {
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.add($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.tank_name = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-full md:w-1/3 pl-0 pr-4 mb-6 md:mb-0" }, [
+            _c("div", { staticClass: "relative" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker"
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "fill-current h-4 w-4",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
             ])
-          ]
-        )
-      ],
-      2
-    )
-  ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "bg-white border border-indigo hover:text-white hover:font-bold hover:border-indigo-darker hover:bg-indigo-darker text-indigo border-indigo font-bold py-2 px-4 rounded inline-flex items-center",
+              attrs: { disabled: _vm.newTodo.length === 0 },
+              on: { click: _vm.add }
+            },
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "fill-current w-4 h-4 mr-2",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 20 20"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", [_vm._v("Add")])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _vm._l(_vm.todos, function(todo, index) {
+            return _c(
+              "div",
+              { key: todo.id, staticClass: "flex mb-4 items-center" },
+              [
+                _c("input", {
+                  staticClass: "mr-2 leading-tight",
+                  attrs: { type: "checkbox" },
+                  on: {
+                    click: function($event) {
+                      _vm.updateStatus(todo)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full text-grey-darker text-2xl",
+                    class: todo.finished
+                      ? "line-through text-grey-dark"
+                      : "text-grey-darker"
+                  },
+                  [_vm._v(_vm._s(todo.text))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full text-grey-darker text-2xl",
+                    class: todo.finished
+                      ? "line-through text-grey-dark"
+                      : "text-grey-darker"
+                  },
+                  [_vm._v(_vm._s(todo.client_name))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full text-grey-darker text-2xl",
+                    class: todo.finished
+                      ? "line-through text-grey-dark"
+                      : "text-grey-darker"
+                  },
+                  [_vm._v(_vm._s(todo.site_name))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "w-full text-grey-darker text-2xl",
+                    class: todo.finished
+                      ? "line-through text-grey-dark"
+                      : "text-grey-darker"
+                  },
+                  [_vm._v(_vm._s(todo.tank_name))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red",
+                    on: {
+                      click: function($event) {
+                        _vm.remove(index)
+                      }
+                    }
+                  },
+                  [_vm._v("Remove")]
+                )
+              ]
+            )
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.todos.length === 0,
+                  expression: "todos.length === 0"
+                }
+              ]
+            },
+            [
+              _c("p", { staticClass: "w-full text-center text-grey-dark" }, [
+                _vm._v("There are no fuel orders")
+              ])
+            ]
+          )
+        ],
+        2
+      )
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "select",
+      {
+        staticClass:
+          "shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker",
+        attrs: { id: "grid-state" }
+      },
+      [
+        _c("option", [_vm._v("New Mexico")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Missouri")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Texas")])
+      ]
+    )
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

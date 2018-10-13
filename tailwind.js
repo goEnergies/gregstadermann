@@ -194,14 +194,23 @@ module.exports = {
 
   fonts: {
     'sans': [
-      //'Operator Mono',
-        //'Roboto',
-        'Exo',
-        'Exo2',
+        'Hind',
+        'Oxygen',
+        'Source Sans Pro',
+        'Muli',
         'Nunito',
-        'Raleway',
+      //'Operator Mono',
+      'Avenir Next',
         'Poppins',
-         'Lato',
+      'Lato',
+      'Roboto',
+      'Rubik',
+      'Raleway',
+      'Poppins',
+      'Exo',
+      'Exo2',
+
+      'Raleway',
       'Quicksand',
 	  'Avenir Next',
       'system-ui',
@@ -230,6 +239,7 @@ module.exports = {
       'serif',
     ],
     'mono': [
+      'Cousine',
       'Menlo',
       'Monaco',
       'Consolas',
@@ -543,7 +553,8 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
-    'screen': '100vh'
+    'screen': '100vh',
+
   },
 
 
@@ -633,6 +644,8 @@ module.exports = {
 
   maxHeight: {
     'full': '100%',
+    'screen-1/4': '25vh',
+    'screen-1/2': '50vh',
     'screen': '100vh',
   },
 

@@ -28,6 +28,6 @@ class Client extends Model
 
      public function site()
      {
-        return $this->hasOne('App\Site');
+        return $this->hasMany('App\Site');
      }
 }
