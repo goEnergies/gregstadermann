@@ -20,10 +20,10 @@ Vue.component('navbar-component', require('./components/navbar.vue'));
 Vue.component('card-component', require('./components/card.vue'));
 Vue.component('note-component', require('./components/note.vue'));
 Vue.component('form-component', require('./components/form.vue'));
-Vue.component('checkbox-component', require('./components/checkbox.vue'));
-Vue.component('sidebar-card-component', require('./components/sidebar-card.vue'));
-Vue.component('header-component', require('./components/header.vue'));
-Vue.component('price-block-component', require('./components/price-block.vue'));
+//Vue.component('checkbox-component', require('./components/checkbox.vue'));
+//Vue.component('sidebar-card-component', require('./components/sidebar-card.vue'));
+//Vue.component('header-component', require('./components/header.vue'));
+//Vue.component('price-block-component', require('./components/price-block.vue'));
 //Vue.component('skeleton-component', require('./components/skeleton.vue'));
 const app = new Vue({
     el: '#app'
